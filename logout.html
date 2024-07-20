@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        .logout-container {
+            text-align: center;
+            background-color: #9bd37e; /* Green color */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-container h1 {
+            margin-top: 0;
+            color: #ffffff; /* White text color */
+        }
+
+        .logout-container button {
+            margin-top: 10px;
+        }
+
+        .user-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: #ffffff; /* White icon background color */
+            color: #9bd37e; /* Green icon color */
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <i class="fas fa-user user-icon"></i>
+        <h1>Are you sure you want to log out?</h1>
+        <button onclick="stay()">No</button>
+        <button onclick="logout()">Yes</button>
+    </div>
+
+    <script>
+        function stay() {
+            // If "No" is clicked, stay on the current page
+            window.location.href = document.referrer;
+        }
+
+        function logout() {
+            // If "Yes" is clicked, redirect to index.html
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
